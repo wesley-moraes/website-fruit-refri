@@ -50,6 +50,30 @@ window.addEventListener('mouseup', function(e) {
 
 })
 
+let startX;
+
+document.addEventListener('touchstart', function(e) {
+  startX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchend', function(e) {
+  let endX = e.changedTouches[0].clientX;
+  handleSwipe(startX, endX);
+});
+
+function handleSwipe(startX, endX) {
+    console.log('touchstart: ' + startX);
+    console.log('touchstart: ' + endX);
+  if (startX > endX + 50) {
+    // Swipe para a esquerda
+    nextFunc(); // Função que você criará para ir ao próximo item
+  } else if (startX < endX - 50) {
+    // Swipe para a direita
+    prevFunc(); // Função que você criará para ir ao item anterior
+  }
+}
+
+/*
 let timeVer = true;
 
 
@@ -76,6 +100,6 @@ window.addEventListener('touchmove', function(event){
 });
 
 
-
+*/
 
 
