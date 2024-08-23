@@ -73,33 +73,4 @@ function handleSwipe(startX, endX) {
   }
 }
 
-/*
-let timeVer = true;
-
-
-window.addEventListener('touchmove', function(event){
-    var windowWidth = window.innerWidth;
-    console.log('tamanho da tela: ' + windowWidth);
-
-    var touchLocation = event.targetTouches[0];
-    console.log(touchLocation.pageX)
-    if(touchLocation.pageX < windowWidth/2 && timeVer === true){
-        prevFunc();
-        timeVer = false;
-        console.log('dentro: ' + timeVer)
-        setInterval(() => timeVer = true , 100);
-    }
-    if(touchLocation.pageX > windowWidth/2 && timeVer === true){
-        console.log('tela dividida: ' + windowWidth/2)
-        timeVer = false;
-        console.log('dentro: ' + timeVer)
-        setInterval(() => timeVer = true , 1000);
-        nextFunc();
-        
-    }
-});
-
-
-*/
-
 
